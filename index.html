@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Cube machine</h1>
+        <p>Select a cube, press num 1 to 5 to change the cube.</p>
+        <script>
+            function accessInjectedProp(propName) {
+                let prop = data[propName];
+                if (prop) {
+                    return prop
+                } else {
+                    let message = `Failed to access property by propery name: (${propName})`
+                    if (typeof logger !== 'undefined') {
+                        logger(message)
+                    }
+                    console.error(message)
+                }
+            }
+        </script>
+        <script src="p5.js" ></script>
+        <script src="https://unpkg.com/p5.js-svg@1.1.1"></script>
+        <script src="json.js" ></script>
+        <script src="functions.js" ></script>
+        <script src="cubes.js" ></script>
+        <script src="main.js" ></script>
+        
+    </body>
+</html>
+
